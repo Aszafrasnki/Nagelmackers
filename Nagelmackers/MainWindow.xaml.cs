@@ -23,6 +23,26 @@ namespace Nagelmackers
         public MainWindow()
         {
             InitializeComponent();
+            DestinationTime.SelectedDate = DateTime.Now;
+        }
+        /// <summary>
+        /// Swaps The values of DestinationFrom and DestinationTo text fields
+        /// </summary>
+        /// <param name="DestinationFrom.Text"></param>
+        /// <param name="DestinationTo.Text"></param>
+        private void DestinationSwitcher_Click(object sender, RoutedEventArgs e)
+        {
+            String Buffor;
+            Buffor = DestinationFrom.Text;
+            DestinationFrom.Text = DestinationTo.Text;
+            DestinationTo.Text = Buffor;
+        }
+        /// <summary>
+        /// Shows the message box with the information about the searched route (temporary)
+        /// </summary>
+        private void DestinationSearch_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Wyszukujesz trasy z " + DestinationFrom.Text + " do " + DestinationTo.Text + " w dniu " + DestinationTime.ToString());
         }
     }
 }

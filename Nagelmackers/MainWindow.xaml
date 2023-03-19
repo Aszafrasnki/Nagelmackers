@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nagelmackers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Width="1920" Height="1077" FontFamily="Agency FB">
+    <Window.Resources>
+        <Style x:Key="lblDesing" TargetType="Label">
+            <Setter Property="FontFamily" Value="Fonts/SmoochSans.ttf #SmoochSans"/>
+        </Style>
 
-    </Grid>
+    </Window.Resources>
+    <Canvas x:Name="Front" Margin="0,0,0,961">
+        <Canvas x:Name="TopBar" Height="100" Width="1920" HorizontalAlignment="Center" Canvas.Left="1" Canvas.Top="1" VerticalAlignment="Center">
+            <Rectangle x:Name="Orange_Rectangle" Stroke="#FFDE7925" Fill="#FFDE7925" Height="100" Width="1920" Canvas.Top="-1" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-1"/>
+            <Label x:Name="AppName" Content="Naglemackers" FontFamily="Agency FB" FontSize="48" Height="80" Canvas.Top="14" Width="224" Canvas.Left="21"/>
+            <Button x:Name="Login" Content="Zaloguj Się" FontFamily="Agency FB" FontSize="36" BorderBrush="#FF7D7E7F" Background="#FF7D7E7F" Foreground="#FFFFF7F7" Height="80" Canvas.Left="1497" Canvas.Top="10" Width="159" Cursor="Hand"/>
+            <Button x:Name="Register" Content="Zarejestruj Się" FontFamily="Agency FB" FontSize="36" BorderBrush="#FF7D7E7F" Background="#FF7D7E7F" Foreground="#FFFFF7F7" Height="80" Canvas.Left="1685" Canvas.Top="10" Width="198" Cursor="Hand"/>
+        </Canvas>
+        <Canvas x:Name="SearchBar" Height="100" Width="1920" Canvas.Left="0" Canvas.Top="0">
+            <Rectangle x:Name="GrayRectangle" Height="100" Width="1814" Canvas.Left="51" Canvas.Top="152" Fill="#FFB1B2B5"/>
+            <TextBox x:Name="DestinationTo" Canvas.Left="520" TextWrapping="Wrap" Canvas.Top="165" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFDE7824" Width="373" Height="74" FontSize="36" Cursor="Pen" Padding="20,15,0,0" Text="Do" BorderBrush="#FFDE7824"/>
+            <TextBox x:Name="DestinationFrom" Canvas.Left="83" Text="Z" Canvas.Top="165" Background="#FFDE7824" Width="373" Height="74" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Pen" MaxLines="1" Padding="20,15,0,0" ScrollViewer.CanContentScroll="True" BorderBrush="#FFDE7824"/>
+            <Button x:Name="DestinationSwitcher" Content="↔" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="36" Width="54" Height="74" Canvas.Left="461" Canvas.Top="165" FontStretch="Normal" HorizontalAlignment="Left" VerticalAlignment="Center" Click="DestinationSwitcher_Click" Cursor="Hand"/>
+            <Button x:Name="DestinationSearch" Content="Znajdź Połączenie" Canvas.Left="1460" Canvas.Top="165" Background="#FFDE7824" Foreground="#FFFFF7F7" Width="373" Height="74" FontSize="36" Padding="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFDE7824" Click="DestinationSearch_Click" Cursor="Hand"/>
+            <DatePicker x:Name="DestinationTime" Canvas.Left="1056" Canvas.Top="165" Background="#FFDE7824" Width="373" Height="74" FontSize="36" FirstDayOfWeek="Monday" BorderBrush="#FFDE7824" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+    </Canvas>
 </Window>

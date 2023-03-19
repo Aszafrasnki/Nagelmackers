@@ -1,0 +1,13 @@
+W ramach tej części projektu program powinien mieć część funkcjonalności jednego okna (np. działający button wykonujący pewną czynność, wyświetlający się ciekawy element interfejsu graficznego lub inny element wymagający oprogramowania w języku C#).
+- na 3 punkty - działający element wykonujący kod w języku C# (działanie powinno być związane z działaniem aplikacji - nie "Hello World")
+
+- na 4 punkty - element powinien reagować w ciekawy sposób na najechanie myszką (np. wyświetlać grafikę, zmieniać kolorystyką, itp.)
+
+- na 5 punktów - okienko powinno zawierać dwa takie działające elementy  
+
+Jako dokumentację wykonanego zadania student powinien zamieścić dokument pdf.
+Dokument musi zawierać:
+- Autora i nazwę realizowanego projektu.
+- Zrzuty ekranu okienka i kodu, który jest realizowany w języku C#.
+- Opis słowny do prezentowanych zrzutów.
+Student również powinien być przygotowany aby w czasie zajęć zaprezentować działanie programu.
