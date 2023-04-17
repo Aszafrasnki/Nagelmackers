@@ -1,4 +1,5 @@
-Station Name;x;y;ZW
+StationName;CordX;CordY;WestEast
+Legnica;63;25;0
 Opole G³ówne;70;40;0
 Kraków G³ówny;80;60;0
 Kraków Zachodni;80;60;1
@@ -6,10 +7,9 @@ Kraków Wschód;80;60;-1
 Wroc³aw G³ówny;60;30;0
 Wroc³aw Zachodni;60;30;1
 Wroc³aw Wchód;60;30;-1
-Legnica;63;25;0
 Warszawa G³ówna;50;70;0
 Warszawa Zachód;50;70;1
-Warszawa  Wchód;50;70;-1
+Warszawa Wchód;50;70;-1
 Czêstochowa G³ówna;65;48;0
 £ódŸ Ba³amuty;50;50;0
 Sanok;95;82;0

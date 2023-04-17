@@ -43,7 +43,9 @@ namespace Nagelmackers
         /// </summary>
         private void DestinationSearch_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Wyszukujesz trasy z " + DestinationFrom.Text + " do " + DestinationTo.Text + " w dniu " + DestinationTime.ToString());
+            StationList kek = new StationList();
+            kek.ListOfStations_Reader();
+            //MessageBox.Show("Wyszukujesz trasy z " + DestinationFrom.Text + " do " + DestinationTo.Text + " w dniu " + DestinationTime.ToString());
         }
         /// <summary>
         /// Swaps the visibility of DestinationDate and DestinationTime based on which is curenty visible
