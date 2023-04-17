@@ -25,7 +25,9 @@
             <TextBox x:Name="DestinationFrom" Canvas.Left="83" Text="Z" Canvas.Top="165" Background="#FFDE7824" Width="373" Height="74" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Pen" MaxLines="1" Padding="20,15,0,0" ScrollViewer.CanContentScroll="True" BorderBrush="#FFDE7824"/>
             <Button x:Name="DestinationSwitcher" Content="↔" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="36" Width="54" Height="74" Canvas.Left="461" Canvas.Top="165" FontStretch="Normal" HorizontalAlignment="Left" VerticalAlignment="Center" Click="DestinationSwitcher_Click" Cursor="Hand"/>
             <Button x:Name="DestinationSearch" Content="Znajdź Połączenie" Canvas.Left="1460" Canvas.Top="165" Background="#FFDE7824" Foreground="#FFFFF7F7" Width="373" Height="74" FontSize="36" Padding="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="#FFDE7824" Click="DestinationSearch_Click" Cursor="Hand"/>
-            <DatePicker x:Name="DestinationTime" Canvas.Left="1056" Canvas.Top="165" Background="#FFDE7824" Width="373" Height="74" FontSize="36" FirstDayOfWeek="Monday" BorderBrush="#FFDE7824" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <DatePicker x:Name="DestinationDate" Canvas.Left="1056" Canvas.Top="165" Background="#FFDE7824" Width="373" Height="74" FontSize="36" FirstDayOfWeek="Monday" BorderBrush="#FFDE7824" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <ComboBox x:Name="DestinationTime" Width="373" Canvas.Left="1056" Canvas.Top="165" Height="74" FontSize="36" Visibility="Hidden"/>
+            <Button x:Name="DateTimeSwicher" Content="🕓" Canvas.Left="958" Canvas.Top="165" HorizontalAlignment="Center" VerticalAlignment="Top" Click="DateTimeSwicher_Click" FontSize="60" RenderTransformOrigin="-0.093,0.162" Width="85" Height="74" BorderBrush="{x:Null}" Background="#FFDE7824"/>
         </Canvas>
     </Canvas>
 </Window>

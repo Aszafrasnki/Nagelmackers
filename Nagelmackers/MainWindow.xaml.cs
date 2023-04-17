@@ -23,7 +23,8 @@ namespace Nagelmackers
         public MainWindow()
         {
             InitializeComponent();
-            DestinationTime.SelectedDate = DateTime.Now;
+            DestinationDate.SelectedDate = DateTime.Now;
+            DestinationTime.SelectedIndex = 0;
         }
         /// <summary>
         /// Swaps The values of DestinationFrom and DestinationTo text fields
@@ -43,6 +44,35 @@ namespace Nagelmackers
         private void DestinationSearch_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Wyszukujesz trasy z " + DestinationFrom.Text + " do " + DestinationTo.Text + " w dniu " + DestinationTime.ToString());
+        }
+        /// <summary>
+        /// Swaps the visibility of DestinationDate and DestinationTime based on which is curenty visible
+        /// </summary>
+        private void DateTimeSwicher_Click(object sender, RoutedEventArgs e)
+        {
+            if (DestinationTime.Visibility == Visibility.Visible)
+            {
+                DestinationTime.Visibility = Visibility.Hidden;
+                DestinationDate.Visibility = Visibility.Visible;
+                DateTimeSwicher.Content = "🕓";
+            }
+            else
+            {
+                DestinationDate.Visibility = Visibility.Hidden;
+                DestinationTime.Visibility = Visibility.Visible;
+                DateTimeSwicher.Content = "📆";
+            }
+        }
+        /// <summary>
+        /// Fills the DestinationTime combobox with the values from 0:00 to 23:00
+        /// </summary>
+        /// <param name="Time"></param>
+        public static void DestinationTimeFiller(ComboBox Time)
+        {
+            for (int i = 0; i < 24; i++)
+            {
+                Time.Items.Add(i.ToString() + ":00");
+            }
         }
     }
 }
