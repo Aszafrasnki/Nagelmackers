@@ -43,11 +43,11 @@ namespace Nagelmackers
             }
             else
             {
-                using (var reader = new StreamReader("Lista_Miast.csv")) //todo: make a proper path
+                using (var reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\Lista_Miast.csv"), Encoding.UTF8))
                 {
                     var CSVconfig = new CsvConfiguration(CultureInfo.CurrentCulture) {
                         Delimiter = ";",
-                        Encoding = Encoding.UTF8 //todo: figure out the encoding so that it accepts polish special signs
+                        Encoding = Encoding.UTF8
                     };
                 using (var csvReader = new CsvReader(reader, CSVconfig))
                     {
@@ -57,7 +57,12 @@ namespace Nagelmackers
                 }
             }
         }
-
+        
+        public void AddStation(string StationName, int CordX, int CordY, int WestEast)
+        {
+            ListOfStations.Add(new Station(StationName, CordX, CordY, WestEast));
+        }
+        
         /// <summary>
         /// Prints out the ListOfStations to a external file in bin/Debug/ListOfStations_Reader_Output.txt
         /// </summary>

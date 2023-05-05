@@ -25,6 +25,7 @@ namespace Nagelmackers
             InitializeComponent();
             DestinationDate.SelectedDate = DateTime.Now;
             DestinationTime.SelectedIndex = 0;
+            ResultsWindow.Visibility = Visibility.Hidden;
         }
         /// <summary>
         /// Swaps The values of DestinationFrom and DestinationTo text fields
@@ -43,9 +44,9 @@ namespace Nagelmackers
         /// </summary>
         private void DestinationSearch_Click(object sender, RoutedEventArgs e)
         {
-            StationList kek = new StationList();
-            kek.ListOfStations_Reader();
-            //MessageBox.Show("Wyszukujesz trasy z " + DestinationFrom.Text + " do " + DestinationTo.Text + " w dniu " + DestinationTime.ToString());
+            StationList StationsList = new StationList();
+            StationsList.ListOfStations_Reader();
+            ResultsWindow.Visibility = Visibility.Visible;
         }
         /// <summary>
         /// Swaps the visibility of DestinationDate and DestinationTime based on which is curenty visible
