@@ -57,7 +57,14 @@ namespace Nagelmackers
                 }
             }
         }
-        
+
+        /// <summary>
+        /// Adds a statuion to the list
+        /// </summary>
+        /// <param name="StationName"></param>
+        /// <param name="CordX"></param>
+        /// <param name="CordY"></param>
+        /// <param name="WestEast"></param>
         public void AddStation(string StationName, int CordX, int CordY, int WestEast)
         {
             ListOfStations.Add(new Station(StationName, CordX, CordY, WestEast));
@@ -82,6 +89,24 @@ namespace Nagelmackers
             textwriter.Flush();
             textwriter.Close();
             textwriter.Dispose();
+        }
+        /// <summary>
+        /// Returns the name of the station in the list at specified index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public string GetStationNameAtIndex(int index)
+        {
+            if (index - 1 > ListOfStations.Count)
+            {
+                return "Error Index out of bounds (ListOfStations)";
+            }
+            return ListOfStations[index].StationName;
+        }
+
+        public int getSize()
+        {
+            return ListOfStations.Count;
         }
     }
 }
