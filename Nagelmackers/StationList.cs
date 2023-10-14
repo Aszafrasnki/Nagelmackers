@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Xml.Linq;
 using CsvHelper;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
@@ -102,6 +104,33 @@ namespace Nagelmackers
                 return "Error Index out of bounds (ListOfStations)";
             }
             return ListOfStations[index].StationName;
+        }
+
+        public int GetIndexFromMachingString(string search)
+        {
+            for (int i = 0; i < ListOfStations.Count; i++)
+            {
+                if (ListOfStations[i].StationName == search)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
+
+        public int GetCordXAtIndex(int index)
+        {
+            return ListOfStations[index].CordX;
+        }
+
+        public int GetCordYAtIndex(int index)
+        {
+            return ListOfStations[index].CordY;
+        }
+
+        public int GetWestEastAtIndex(int index)
+        {
+            return ListOfStations[index].WestEast;
         }
 
         public int getSize()

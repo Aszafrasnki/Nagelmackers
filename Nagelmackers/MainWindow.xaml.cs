@@ -50,6 +50,18 @@ namespace Nagelmackers
         /// </summary>
         private void DestinationSearch_Click(object sender, RoutedEventArgs e)
         {
+            int fromI = StationsList.GetIndexFromMachingString(DestinationFrom.Text);
+            int toI = StationsList.GetIndexFromMachingString(DestinationTo.Text);
+            int fCrdX = StationsList.GetCordXAtIndex(fromI);
+            int fCrdY = StationsList.GetCordYAtIndex(fromI);
+            int tCrdX = StationsList.GetCordXAtIndex(toI);
+            int tCrdY = StationsList.GetCordYAtIndex(toI);
+            int fWestEast = StationsList.GetWestEastAtIndex(fromI);
+            int tWestEast = StationsList.GetWestEastAtIndex(toI);
+            string depart = DestinationFrom.Text;
+            string arrive = DestinationTo.Text;
+            int departureT = (DestinationTime.SelectedIndex + 1) * 60;
+            //private ResultsList looker = new ResultsList(depart, fCrdX, fCrdY, fWestEast, arrive, tCrdX, tCrdY, tWestEast,50, departureT, CarrierList);
             StationsList.ListOfStations_Reader();
             ResultsWindow.Visibility = Visibility.Visible;
         }
